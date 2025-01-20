@@ -1,5 +1,4 @@
 import { EmailTemplate } from '@/components/email-template';
-import { config } from '@/data/config';
 import { Resend } from 'resend';
 import { z } from 'zod';
 
@@ -25,7 +24,8 @@ export async function POST(req: Request) {
 
     const { data: resendData, error: resendError } = await resend.emails.send({
       from: 'Porfolio <onboarding@resend.dev>',
-      to: [config.email],
+      // to: [config.email],
+      to: ['appigle@gmail.com'],
       subject: 'Contact me from portfolio',
       react: EmailTemplate({
         fullName: zodData.fullName,
