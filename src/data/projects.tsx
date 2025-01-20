@@ -5,14 +5,22 @@ import { TypographyH3, TypographyP } from '@/components/ui/typography';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from 'react-icons/ri';
+import {
+  RiJavaFill,
+  RiNextjsFill,
+  RiNodejsFill,
+  RiReactjsFill,
+} from 'react-icons/ri';
 import {
   SiChakraui,
   SiDocker,
   SiExpress,
   SiFirebase,
   SiJavascript,
+  SiJsonwebtokens,
+  SiMaterialdesign,
   SiMongodb,
+  SiMysql,
   SiPostgresql,
   SiPrisma,
   SiPython,
@@ -20,6 +28,7 @@ import {
   SiSanity,
   SiShadcnui,
   SiSocketdotio,
+  SiSpringboot,
   SiSupabase,
   SiTailwindcss,
   SiThreedotjs,
@@ -67,6 +76,36 @@ export type Skill = {
   icon: ReactNode;
 };
 const PROJECT_SKILLS = {
+  springboot: {
+    title: 'Springboot',
+    bg: 'black',
+    fg: 'white',
+    icon: <SiSpringboot />,
+  },
+  java: {
+    title: 'Java',
+    bg: 'black',
+    fg: 'white',
+    icon: <RiJavaFill />,
+  },
+  jwt: {
+    title: 'JWT',
+    bg: 'black',
+    fg: 'white',
+    icon: <SiJsonwebtokens />,
+  },
+  mysql: {
+    title: 'Mysql',
+    bg: 'black',
+    fg: 'white',
+    icon: <SiMysql />,
+  },
+  material_ui: {
+    title: 'Material Tailwind',
+    bg: 'black',
+    fg: 'white',
+    icon: <SiMaterialdesign />,
+  },
   next: {
     title: 'Next.js',
     bg: 'black',
@@ -232,58 +271,60 @@ export type Project = {
   content: React.ReactNode | any;
   github?: string;
   live: string;
+  disabled?: boolean;
 };
 const projects: Project[] = [
   {
-    id: 'codingducks',
-    category: 'Coding platform',
-    title: 'Coding Ducks',
-    src: '/assets/projects-screenshots/codingducks/landing.png',
+    id: 'xiaopotato',
+    category: 'Social website',
+    title: 'Xiao Potato',
+    src: '/assets/projects-screenshots/xiaopotato/feature02.png',
     screenshots: ['landing.png'],
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.reactQuery,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.sockerio,
         PROJECT_SKILLS.firebase,
       ],
       backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.python,
-        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.springboot,
+        PROJECT_SKILLS.java,
+        PROJECT_SKILLS.mysql,
+        PROJECT_SKILLS.jwt,
         PROJECT_SKILLS.sockerio,
+        PROJECT_SKILLS.docker,
       ],
     },
-    live: '#',
+    live: 'https://zfc.xiaopotato.top/',
     github: 'https://github.com/Appigle',
     get content() {
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            Coding ducks = LeetCode + CodePen + CSS Battles
+            XiaoPotato - Art Platform
           </TypographyP>
           <TypographyP className="font-mono ">
-            Coding Ducks is your coding dojo — where you level up your skills,
-            battle in real-time code duels, and earn badges like a true code
-            warrior. Track your progress, flex your brain, and climb the
-            leaderboard. Ready to quack the code?
+            Xiao Potato is a vibrant art-sharing platform that connects artists
+            and art enthusiasts from around the world.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Problems </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Features </TypographyH3>
           <p className="font-mono mb-2">
-            Solve coding problems similar to LeetCode, enhancing your
-            problem-solving skills across various languages.
+            Our platform provides a space where creators can showcase their
+            artistic journey, from traditional paintings to digital art,
+            photography, and beyond. We believe in the power of art to inspire,
+            connect, and transform lives through visual storytelling and
+            creative expression.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/codingducks/problems.png`,
-              `${BASE_PATH}/codingducks/problem.png`,
+              `${BASE_PATH}/xiaopotato/feature.png`,
+              `${BASE_PATH}/xiaopotato/feature01.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Ducklets</TypographyH3>
+          {/* <TypographyH3 className="my-4 mt-8">Ducklets</TypographyH3>
           <p className="font-mono mb-2">
             Collaborate in real-time with others in a multiplayer coding
             environment, just like CodePen but with a social twist.
@@ -296,7 +337,6 @@ const projects: Project[] = [
             ]}
           />
           <TypographyH3 className="my-4 mt-8">UI Battles </TypographyH3>
-
           <p className="font-mono mb-2">
             Challenge yourself to create UI components with HTML/CSS/JS, and get
             instant feedback with an automated similarity scoring.
@@ -314,12 +354,7 @@ const projects: Project[] = [
             host three contests during college.
           </p>
           <SlideShow images={[`${BASE_PATH}/codingducks/contests.png`]} />
-          <TypographyH3 className="my-4 mt-8">Playground </TypographyH3>
-          <p className="font-mono mb-2">
-            Test and execute your code instantly in my versatile online code
-            runner.
-          </p>
-          <SlideShow images={[`${BASE_PATH}/codingducks/playground.png`]} />
+
           <TypographyH3 className="my-4 mt-8">Users</TypographyH3>
 
           <p className="font-mono mb-2">
@@ -331,12 +366,13 @@ const projects: Project[] = [
               `${BASE_PATH}/codingducks/users.png`,
               `${BASE_PATH}/codingducks/user.png`,
             ]}
-          />
+          /> */}
         </div>
       );
     },
   },
   {
+    disabled: true,
     id: 'couponluxury',
     category: 'Coupon site',
     title: 'Coupon Luxury',
@@ -428,6 +464,7 @@ const projects: Project[] = [
     },
   },
   {
+    disabled: true,
     id: 'the-booking-desk',
     category: 'Travel',
     title: 'The Booking Desk',
@@ -495,6 +532,7 @@ const projects: Project[] = [
     },
   },
   {
+    disabled: true,
     id: 'portfolio',
     category: 'Portfolio',
     title: 'My Portfolio',
@@ -561,6 +599,7 @@ const projects: Project[] = [
     },
   },
   {
+    disabled: true,
     id: 'ghostchat',
     category: 'Anonymous chat',
     title: 'GhostChat',
@@ -597,6 +636,7 @@ const projects: Project[] = [
     },
   },
   {
+    disabled: true,
     id: 'jra',
     category: 'Result analyzer',
     title: 'JNTUA Results Analyzer',

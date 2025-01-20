@@ -1,38 +1,39 @@
-"use client";
-import Image from "next/image";
-import React from "react";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Modal,
   ModalBody,
   ModalContent,
   ModalFooter,
   ModalTrigger,
-} from "../ui/animated-modal";
-import { FloatingDock } from "../ui/floating-dock";
-import Link from "next/link";
+} from '../ui/animated-modal';
+import { FloatingDock } from '../ui/floating-dock';
 
-import SmoothScroll from "../smooth-scroll";
-import projects, { Project } from "@/data/projects";
-import { cn } from "@/lib/utils";
+import projects, { Project } from '@/data/projects';
+import { cn } from '@/lib/utils';
+import SmoothScroll from '../smooth-scroll';
 
 const ProjectsSection = () => {
   return (
     <section id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
-      <Link href={"#projects"}>
+      <Link href={'#projects'}>
         <h2
           className={cn(
-            "bg-clip-text text-4xl text-center text-transparent md:text-7xl pt-16",
-            "bg-gradient-to-b from-black/80 to-black/50",
-            "dark:bg-gradient-to-b dark:from-white/80 dark:to-white/20 dark:bg-opacity-50 mb-32"
+            'bg-clip-text text-4xl text-center text-transparent md:text-7xl pt-16',
+            'bg-gradient-to-b from-black/80 to-black/50',
+            'dark:bg-gradient-to-b dark:from-white/80 dark:to-white/20 dark:bg-opacity-50 mb-32'
           )}
         >
           Projects
         </h2>
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-3">
-        {projects.map((project, index) => (
-          <Modall key={project.src} project={project} />
-        ))}
+        {projects.map((project, index) => {
+          return !project.disabled ? (
+            <Modall key={project.src} project={project} />
+          ) : null;
+        })}
       </div>
     </section>
   );
@@ -44,7 +45,7 @@ const Modall = ({ project }: { project: Project }) => {
         <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
           <div
             className="relative w-[400px] h-auto rounded-lg overflow-hidden"
-            style={{ aspectRatio: "3/2" }}
+            style={{ aspectRatio: '3/2' }}
           >
             <Image
               className="absolute w-full h-full top-0 left-0 hover:scale-[1.05] transition-all"
