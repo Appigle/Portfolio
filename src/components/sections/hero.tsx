@@ -75,7 +75,7 @@ const HeroSection = () => {
                       'cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text '
                     )}
                   >
-                    A Full Stack Web Developer
+                    A Full Stack Web Developer who [💖] his wife forever!
                   </p>
                 </BlurIn>
               </div>
