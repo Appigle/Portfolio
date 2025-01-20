@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { cn } from '@/lib/utils';
+import { ReactNode } from 'react';
 
 export function TypographyH1({
   children,
@@ -9,14 +9,14 @@ export function TypographyH1({
   className?: string;
 }) {
   return (
-    <h1
+    <div
       className={cn(
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        'scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl',
         className
       )}
     >
       {children}
-    </h1>
+    </div>
   );
 }
 export function TypographyH2({
@@ -29,7 +29,7 @@ export function TypographyH2({
   return (
     <h2
       className={cn(
-        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0',
         className
       )}
     >
@@ -47,7 +47,7 @@ export function TypographyH3({
   return (
     <h3
       className={cn(
-        "scroll-m-20 text-2xl font-semibold tracking-tight",
+        'scroll-m-20 text-2xl font-semibold tracking-tight',
         className
       )}
     >
@@ -65,7 +65,7 @@ export function TypographyH4({
   return (
     <h4
       className={cn(
-        "scroll-m-20 text-xl font-semibold tracking-tight",
+        'scroll-m-20 text-xl font-semibold tracking-tight',
         className
       )}
     >
@@ -81,7 +81,7 @@ export function TypographyP({
   className?: string;
 }) {
   return (
-    <p className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}>
+    <p className={cn('leading-7 [&:not(:first-child)]:mt-6', className)}>
       {children}
     </p>
   );
@@ -94,7 +94,7 @@ export function TypographyBlockquote({
   className?: string;
 }) {
   return (
-    <blockquote className={cn("mt-6 border-l-2 pl-6 italic", className)}>
+    <blockquote className={cn('mt-6 border-l-2 pl-6 italic', className)}>
       {children}
     </blockquote>
   );
@@ -107,20 +107,20 @@ export function TypographyTable({
   className?: string;
 }) {
   return (
-    <div className={cn("my-6 w-full overflow-y-auto", className)}>
-      <table className={cn("w-full")}>
+    <div className={cn('my-6 w-full overflow-y-auto', className)}>
+      <table className={cn('w-full')}>
         <thead>
-          <tr className={cn("m-0 border-t p-0 even:bg-muted")}>
+          <tr className={cn('m-0 border-t p-0 even:bg-muted')}>
             <th
               className={cn(
-                "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               King&apos;s Treasury
             </th>
             <th
               className={cn(
-                "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               People&apos;s happiness
@@ -128,49 +128,49 @@ export function TypographyTable({
           </tr>
         </thead>
         <tbody>
-          <tr className={cn("m-0 border-t p-0 even:bg-muted")}>
+          <tr className={cn('m-0 border-t p-0 even:bg-muted')}>
             <td
               className={cn(
-                "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               Empty
             </td>
             <td
               className={cn(
-                "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               Overflowing
             </td>
           </tr>
-          <tr className={cn("m-0 border-t p-0 even:bg-muted")}>
+          <tr className={cn('m-0 border-t p-0 even:bg-muted')}>
             <td
               className={cn(
-                "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               Modest
             </td>
             <td
               className={cn(
-                "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               Satisfied
             </td>
           </tr>
-          <tr className={cn("m-0 border-t p-0 even:bg-muted")}>
+          <tr className={cn('m-0 border-t p-0 even:bg-muted')}>
             <td
               className={cn(
-                "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               Full
             </td>
             <td
               className={cn(
-                "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
+                'border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right'
               )}
             >
               Ecstatic
@@ -189,7 +189,7 @@ export function TypographyList({
   className?: string;
 }) {
   return (
-    <ul className={cn("my-6 ml-6 list-disc [&>li]:mt-2", className)}>
+    <ul className={cn('my-6 ml-6 list-disc [&>li]:mt-2', className)}>
       {children}
     </ul>
   );
@@ -204,7 +204,7 @@ export function TypographyInlineCode({
   return (
     <code
       className={cn(
-        "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
+        'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
         className
       )}
     >
@@ -220,7 +220,7 @@ export function TypographyLead({
   className?: string;
 }) {
   return (
-    <p className={cn("text-xl text-muted-foreground", className)}>{children}</p>
+    <p className={cn('text-xl text-muted-foreground', className)}>{children}</p>
   );
 }
 export function TypographyLarge({
@@ -231,7 +231,7 @@ export function TypographyLarge({
   className?: string;
 }) {
   return (
-    <div className={cn("text-lg font-semibold", className)}>{children}</div>
+    <div className={cn('text-lg font-semibold', className)}>{children}</div>
   );
 }
 
@@ -243,7 +243,7 @@ export function TypographySmall({
   className?: string;
 }) {
   return (
-    <small className={cn("text-sm font-medium leading-none", className)}>
+    <small className={cn('text-sm font-medium leading-none', className)}>
       {children}
     </small>
   );
@@ -256,6 +256,6 @@ export function TypographyMuted({
   className?: string;
 }) {
   return (
-    <p className={cn("text-sm text-muted-foreground", className)}>{children}</p>
+    <p className={cn('text-sm text-muted-foreground', className)}>{children}</p>
   );
 }

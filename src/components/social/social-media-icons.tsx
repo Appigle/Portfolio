@@ -1,33 +1,32 @@
-"use client";
+'use client';
 
-import { useInView } from "framer-motion";
-import React, { useRef } from "react";
-import { Button } from "../ui/button";
-import { SiGithub, SiInstagram, SiLinkedin, SiTwitter } from "react-icons/si";
-import { Linkedin } from "lucide-react";
-import { config } from "@/data/config";
-import Link from "next/link";
+import { config } from '@/data/config';
+import { useInView } from 'framer-motion';
+import Link from 'next/link';
+import { useRef } from 'react';
+import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si';
+import { Button } from '../ui/button';
 
 const BUTTONS = [
   {
-    name: "Github",
+    name: 'Github',
     href: config.social.github,
-    icon: <SiGithub size={"24"} color={"#fff"} />,
+    icon: <SiGithub size={'24'} color={'#fff'} />,
   },
   {
-    name: "LinkedIn",
+    name: 'LinkedIn',
     href: config.social.linkedin,
-    icon: <SiLinkedin size={"24"} color={"#fff"} />,
+    icon: <SiLinkedin size={'24'} color={'#fff'} />,
   },
+  // {
+  //   name: "Twitter",
+  //   href: config.social.twitter,
+  //   icon: <SiTwitter size={"24"} color={"#fff"} />,
+  // },
   {
-    name: "Twitter",
-    href: config.social.twitter,
-    icon: <SiTwitter size={"24"} color={"#fff"} />,
-  },
-  {
-    name: "Instagram",
+    name: 'Instagram',
     href: config.social.instagram,
-    icon: <SiInstagram size={"24"} color={"#fff"} />,
+    icon: <SiInstagram size={'24'} color={'#fff'} />,
   },
 ];
 
@@ -39,7 +38,7 @@ const SocialMediaButtons = () => {
       {show &&
         BUTTONS.map((button) => (
           <Link href={button.href} key={button.name} target="_blank">
-            <Button variant={"ghost"}>{button.icon}</Button>
+            <Button variant={'ghost'}>{button.icon}</Button>
           </Link>
         ))}
     </div>

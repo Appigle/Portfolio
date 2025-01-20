@@ -1,18 +1,18 @@
-"use client";
-import { Check, ChevronRight, Loader2 } from "lucide-react";
-import React from "react";
-import { Label } from "./ui/label";
-import { Input } from "./ui/ace-input";
-import { Textarea } from "./ui/ace-textarea";
-import { cn } from "@/lib/utils";
-import { useToast } from "./ui/use-toast";
-import { Button } from "./ui/button";
-import { useRouter } from "next/navigation";
+'use client';
+import { cn } from '@/lib/utils';
+import { ChevronRight, Loader2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import React from 'react';
+import { Input } from './ui/ace-input';
+import { Textarea } from './ui/ace-textarea';
+import { Button } from './ui/button';
+import { Label } from './ui/label';
+import { useToast } from './ui/use-toast';
 
 const ContactForm = () => {
-  const [fullName, setFullName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [fullName, setFullName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [message, setMessage] = React.useState('');
   const [loading, setLoading] = React.useState(false);
 
   const { toast } = useToast();
@@ -22,10 +22,10 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/send", {
-        method: "POST",
+      const res = await fetch('/api/send', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           fullName,
@@ -36,27 +36,33 @@ const ContactForm = () => {
       const data = await res.json();
       if (data.error) throw new Error(data.error);
       toast({
-        title: "Thank you!",
+        title: 'Thank you!',
         description: "I'll get back to you as soon as possible.",
-        variant: "default",
-        className: cn("top-0 mx-auto flex fixed md:top-4 md:right-4"),
+        variant: 'default',
+        className: cn('top-0 mx-auto flex fixed md:top-4 md:right-4'),
       });
       setLoading(false);
-      setFullName("");
-      setEmail("");
-      setMessage("");
+      setFullName('');
+      setEmail('');
+      setMessage('');
       const timer = setTimeout(() => {
-        router.push("/");
+        router.push('/');
         clearTimeout(timer);
       }, 1000);
     } catch (err) {
+      let error = '';
+      try {
+        if (err instanceof Error) {
+          error = JSON.parse(err.message)?.[0]?.message;
+        }
+      } catch (error) {}
       toast({
-        title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        title: 'Error',
+        description: error || 'Something went wrong! Please check the fields.',
         className: cn(
-          "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
+          'top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4'
         ),
-        variant: "destructive",
+        variant: 'destructive',
       });
     }
     setLoading(false);
@@ -131,7 +137,7 @@ const LabelInputContainer = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col space-y-2 w-full", className)}>
+    <div className={cn('flex flex-col space-y-2 w-full', className)}>
       {children}
     </div>
   );

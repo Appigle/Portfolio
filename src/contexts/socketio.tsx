@@ -1,14 +1,14 @@
-"use client";
-import React, {
+'use client';
+import {
   createContext,
   Dispatch,
   ReactNode,
   SetStateAction,
   useEffect,
   useState,
-} from "react";
-import { io, Socket } from "socket.io-client";
-import { generateRandomCursor } from "../lib/generate-random-cursor"
+} from 'react';
+import { io, Socket } from 'socket.io-client';
+import { generateRandomCursor } from '../lib/generate-random-cursor';
 
 export type User = {
   socketId: string;
@@ -53,17 +53,23 @@ const SocketContextProvider = ({ children }: { children: ReactNode }) => {
 
   // SETUP SOCKET.IO
   useEffect(() => {
-    const username =  localStorage.getItem("username") || generateRandomCursor().name
+    const username =
+      localStorage.getItem('username') || generateRandomCursor().name;
+
+    if (!process.env.NEXT_PUBLIC_WS_URL) return;
     const socket = io(process.env.NEXT_PUBLIC_WS_URL!, {
       query: { username },
     });
     setSocket(socket);
-    socket.on("connect", () => {});
-    socket.on("msgs-receive-init", (msgs) => {
+    socket.on('connect', () => {});
+    socket.on('msgs-receive-init', (msgs) => {
       setMsgs(msgs);
     });
-    socket.on("msg-receive", (msgs) => {
+    socket.on('msg-receive', (msgs) => {
       setMsgs((p) => [...p, msgs]);
+    });
+    socket.on('error', () => {
+      socket.disconnect();
     });
     return () => {
       socket.disconnect();

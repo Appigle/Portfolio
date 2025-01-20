@@ -1,12 +1,11 @@
-import AceTernityLogo from "@/components/logos/aceternity";
-import SlideShow from "@/components/slide-show";
-import { Button } from "@/components/ui/button";
-import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { ReactNode } from "react";
-import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
+import AceTernityLogo from '@/components/logos/aceternity';
+import SlideShow from '@/components/slide-show';
+import { Button } from '@/components/ui/button';
+import { TypographyH3, TypographyP } from '@/components/ui/typography';
+import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+import { ReactNode } from 'react';
+import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from 'react-icons/ri';
 import {
   SiChakraui,
   SiDocker,
@@ -26,9 +25,9 @@ import {
   SiThreedotjs,
   SiTypescript,
   SiVuedotjs,
-} from "react-icons/si";
-import { TbBrandFramerMotion } from "react-icons/tb";
-const BASE_PATH = "/assets/projects-screenshots";
+} from 'react-icons/si';
+import { TbBrandFramerMotion } from 'react-icons/tb';
+const BASE_PATH = '/assets/projects-screenshots';
 
 const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
   return (
@@ -39,7 +38,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
         target="_new"
         href={live}
       >
-        <Button variant={"default"} size={"sm"}>
+        <Button variant={'default'} size={'sm'}>
           Visit Website
           <ArrowUpRight className="ml-3 w-5 h-5" />
         </Button>
@@ -51,7 +50,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
           target="_new"
           href={repo}
         >
-          <Button variant={"default"} size={"sm"}>
+          <Button variant={'default'} size={'sm'}>
             Github
             <ArrowUpRight className="ml-3 w-5 h-5" />
           </Button>
@@ -69,87 +68,87 @@ export type Skill = {
 };
 const PROJECT_SKILLS = {
   next: {
-    title: "Next.js",
-    bg: "black",
-    fg: "white",
+    title: 'Next.js',
+    bg: 'black',
+    fg: 'white',
     icon: <RiNextjsFill />,
   },
   chakra: {
-    title: "Chakra UI",
-    bg: "black",
-    fg: "white",
+    title: 'Chakra UI',
+    bg: 'black',
+    fg: 'white',
     icon: <SiChakraui />,
   },
   node: {
-    title: "Node.js",
-    bg: "black",
-    fg: "white",
+    title: 'Node.js',
+    bg: 'black',
+    fg: 'white',
     icon: <RiNodejsFill />,
   },
   python: {
-    title: "Python",
-    bg: "black",
-    fg: "white",
+    title: 'Python',
+    bg: 'black',
+    fg: 'white',
     icon: <SiPython />,
   },
   prisma: {
-    title: "prisma",
-    bg: "black",
-    fg: "white",
+    title: 'prisma',
+    bg: 'black',
+    fg: 'white',
     icon: <SiPrisma />,
   },
   postgres: {
-    title: "PostgreSQL",
-    bg: "black",
-    fg: "white",
+    title: 'PostgreSQL',
+    bg: 'black',
+    fg: 'white',
     icon: <SiPostgresql />,
   },
   mongo: {
-    title: "MongoDB",
-    bg: "black",
-    fg: "white",
+    title: 'MongoDB',
+    bg: 'black',
+    fg: 'white',
     icon: <SiMongodb />,
   },
   express: {
-    title: "Express",
-    bg: "black",
-    fg: "white",
+    title: 'Express',
+    bg: 'black',
+    fg: 'white',
     icon: <SiExpress />,
   },
   reactQuery: {
-    title: "React Query",
-    bg: "black",
-    fg: "white",
+    title: 'React Query',
+    bg: 'black',
+    fg: 'white',
     icon: <SiReactquery />,
   },
   shadcn: {
-    title: "ShanCN UI",
-    bg: "black",
-    fg: "white",
+    title: 'ShanCN UI',
+    bg: 'black',
+    fg: 'white',
     icon: <SiShadcnui />,
   },
   aceternity: {
-    title: "Aceternity",
-    bg: "black",
-    fg: "white",
+    title: 'Aceternity',
+    bg: 'black',
+    fg: 'white',
     icon: <AceTernityLogo />,
   },
   tailwind: {
-    title: "Tailwind",
-    bg: "black",
-    fg: "white",
+    title: 'Tailwind',
+    bg: 'black',
+    fg: 'white',
     icon: <SiTailwindcss />,
   },
   docker: {
-    title: "Docker",
-    bg: "black",
-    fg: "white",
+    title: 'Docker',
+    bg: 'black',
+    fg: 'white',
     icon: <SiDocker />,
   },
   yjs: {
-    title: "Y.js",
-    bg: "black",
-    fg: "white",
+    title: 'Y.js',
+    bg: 'black',
+    fg: 'white',
     icon: (
       <span>
         <strong>Y</strong>js
@@ -157,69 +156,69 @@ const PROJECT_SKILLS = {
     ),
   },
   firebase: {
-    title: "Firebase",
-    bg: "black",
-    fg: "white",
+    title: 'Firebase',
+    bg: 'black',
+    fg: 'white',
     icon: <SiFirebase />,
   },
   sockerio: {
-    title: "Socket.io",
-    bg: "black",
-    fg: "white",
+    title: 'Socket.io',
+    bg: 'black',
+    fg: 'white',
     icon: <SiSocketdotio />,
   },
   js: {
-    title: "JavaScript",
-    bg: "black",
-    fg: "white",
+    title: 'JavaScript',
+    bg: 'black',
+    fg: 'white',
     icon: <SiJavascript />,
   },
   ts: {
-    title: "TypeScript",
-    bg: "black",
-    fg: "white",
+    title: 'TypeScript',
+    bg: 'black',
+    fg: 'white',
     icon: <SiTypescript />,
   },
   vue: {
-    title: "Vue.js",
-    bg: "black",
-    fg: "white",
+    title: 'Vue.js',
+    bg: 'black',
+    fg: 'white',
     icon: <SiVuedotjs />,
   },
   react: {
-    title: "React.js",
-    bg: "black",
-    fg: "white",
+    title: 'React.js',
+    bg: 'black',
+    fg: 'white',
     icon: <RiReactjsFill />,
   },
   sanity: {
-    title: "Sanity",
-    bg: "black",
-    fg: "white",
+    title: 'Sanity',
+    bg: 'black',
+    fg: 'white',
     icon: <SiSanity />,
   },
   spline: {
-    title: "Spline",
-    bg: "black",
-    fg: "white",
+    title: 'Spline',
+    bg: 'black',
+    fg: 'white',
     icon: <SiThreedotjs />,
   },
   gsap: {
-    title: "GSAP",
-    bg: "black",
-    fg: "white",
-    icon: "",
+    title: 'GSAP',
+    bg: 'black',
+    fg: 'white',
+    icon: '',
   },
   framerMotion: {
-    title: "Framer Motion",
-    bg: "black",
-    fg: "white",
+    title: 'Framer Motion',
+    bg: 'black',
+    fg: 'white',
     icon: <TbBrandFramerMotion />,
   },
   supabase: {
-    title: "Supabase",
-    bg: "black",
-    fg: "white",
+    title: 'Supabase',
+    bg: 'black',
+    fg: 'white',
     icon: <SiSupabase />,
   },
 };
@@ -236,11 +235,11 @@ export type Project = {
 };
 const projects: Project[] = [
   {
-    id: "codingducks",
-    category: "Coding platform",
-    title: "Coding Ducks",
-    src: "/assets/projects-screenshots/codingducks/landing.png",
-    screenshots: ["landing.png"],
+    id: 'codingducks',
+    category: 'Coding platform',
+    title: 'Coding Ducks',
+    src: '/assets/projects-screenshots/codingducks/landing.png',
+    screenshots: ['landing.png'],
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -258,8 +257,8 @@ const projects: Project[] = [
         PROJECT_SKILLS.sockerio,
       ],
     },
-    live: "https://www.codingducks.xyz/",
-    github: "https://github.com/Naresh-Khatri/Coding-Ducks",
+    live: '#',
+    github: 'https://github.com/Appigle',
     get content() {
       return (
         <div>
@@ -338,12 +337,12 @@ const projects: Project[] = [
     },
   },
   {
-    id: "couponluxury",
-    category: "Coupon site",
-    title: "Coupon Luxury",
-    src: "/assets/projects-screenshots/couponluxury/landing.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
-    live: "https://www.couponluxury.com/",
+    id: 'couponluxury',
+    category: 'Coupon site',
+    title: 'Coupon Luxury',
+    src: '/assets/projects-screenshots/couponluxury/landing.png',
+    screenshots: ['1.png', '2.png', '3.png', '4.png', '5.png'],
+    live: 'https://www.couponluxury.com/',
     skills: {
       frontend: [
         PROJECT_SKILLS.js,
@@ -407,13 +406,13 @@ const projects: Project[] = [
             ]}
           />
           <p className="font-mono mb-2 mt-5">
-            Plus, I&apos;ve sprinkled in some extra magic like personalized
-            deal recommendations, user-friendly search features, and a sleek,
+            Plus, I&apos;ve sprinkled in some extra magic like personalized deal
+            recommendations, user-friendly search features, and a sleek,
             responsive design that works like a charm on any device.
           </p>
           <p className="font-mono mb-2">
-            CouponLuxury isn&apos;t just a website; it&apos;s your personal deal-hunting
-            assistant, ensuring you never miss out on a bargain!
+            CouponLuxury isn&apos;t just a website; it&apos;s your personal
+            deal-hunting assistant, ensuring you never miss out on a bargain!
           </p>
           {/* <TypographyP className="my-4 mt-8">
           <strong>Misc:</strong>
@@ -429,12 +428,12 @@ const projects: Project[] = [
     },
   },
   {
-    id: "the-booking-desk",
-    category: "Travel",
-    title: "The Booking Desk",
-    src: "/assets/projects-screenshots/the-booking-desk/landing.png",
-    screenshots: ["1.png"],
-    live: "https://thebookingdesk.com/",
+    id: 'the-booking-desk',
+    category: 'Travel',
+    title: 'The Booking Desk',
+    src: '/assets/projects-screenshots/the-booking-desk/landing.png',
+    screenshots: ['1.png'],
+    live: 'https://thebookingdesk.com/',
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -462,8 +461,8 @@ const projects: Project[] = [
           <TypographyH3 className="my-4 mt-8">Blogs</TypographyH3>
           <p className="font-mono mb-2">
             Dive into the curated articles written by travel experts. Whether
-            you&apos;re looking for hidden gems or travel hacks, our blog section has
-            you covered.
+            you&apos;re looking for hidden gems or travel hacks, our blog
+            section has you covered.
           </p>
           <SlideShow
             images={[
@@ -474,8 +473,8 @@ const projects: Project[] = [
           <TypographyH3 className="my-4 mt-8">Sanity CMS</TypographyH3>
 
           <p className="font-mono mb-2">
-            Keeping everything fresh and up-to-date, I&apos;ve integrated Sanity CMS
-            to manage all the content with ease, ensuring you always get the
+            Keeping everything fresh and up-to-date, I&apos;ve integrated Sanity
+            CMS to manage all the content with ease, ensuring you always get the
             latest and greatest information.
           </p>
           <SlideShow
@@ -485,23 +484,24 @@ const projects: Project[] = [
             ]}
           />
           <p className="font-mono mb-2 my-8">
-            With a stunning 100% score on Lighthouse, The Booking Desk isn&apos;t
-            just beautiful—it&apos;s built to perform. Whether you&apos;re planning your
-            next adventure or just daydreaming, our site delivers a top-notch
-            experience that&apos;s both informative and enjoyable.
+            With a stunning 100% score on Lighthouse, The Booking Desk
+            isn&apos;t just beautiful—it&apos;s built to perform. Whether
+            you&apos;re planning your next adventure or just daydreaming, our
+            site delivers a top-notch experience that&apos;s both informative
+            and enjoyable.
           </p>
         </div>
       );
     },
   },
   {
-    id: "portfolio",
-    category: "Portfolio",
-    title: "My Portfolio",
-    src: "/assets/projects-screenshots/portfolio/landing.png",
-    screenshots: ["1.png"],
-    live: "http://nareshkhatri.vercel.app",
-    github:"https://github.com/Naresh-Khatri/Portfolio",
+    id: 'portfolio',
+    category: 'Portfolio',
+    title: 'My Portfolio',
+    src: '/assets/projects-screenshots/portfolio/landing.png',
+    screenshots: ['1.png'],
+    live: '#',
+    github: '#',
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -523,7 +523,7 @@ const projects: Project[] = [
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">
-            Beautiful 3D Objects{" "}
+            Beautiful 3D Objects{' '}
           </TypographyH3>
           <p className="font-mono mb-2">
             Did you see that 3D keyboard modal? Yeah! I made that. That
@@ -561,13 +561,13 @@ const projects: Project[] = [
     },
   },
   {
-    id: "ghostchat",
-    category: "Anonymous chat",
-    title: "GhostChat",
-    src: "/assets/projects-screenshots/ghostchat/1.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png"],
-    live: "https://ghostchat.vercel.app",
-    github:"https://github.com/Naresh-Khatri/GhostChat",
+    id: 'ghostchat',
+    category: 'Anonymous chat',
+    title: 'GhostChat',
+    src: '/assets/projects-screenshots/ghostchat/1.png',
+    screenshots: ['1.png', '2.png', '3.png', '4.png'],
+    live: '#',
+    github: '#',
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.chakra],
       backend: [PROJECT_SKILLS.supabase],
@@ -577,11 +577,11 @@ const projects: Project[] = [
         <div>
           <TypographyP className="font-mono ">
             Ghostchat is your go-to spot for sending anonymous messages without
-            leaving a trace. Powered by Supabase, it&apos;s all about keeping things
-            low-key and secure. Whether you&apos;re sharing secrets, giving feedback,
-            or just having some fun, Ghostchat ensures your identity stays
-            hidden, while your voice is heard. Say what you want, without the
-            worry.
+            leaving a trace. Powered by Supabase, it&apos;s all about keeping
+            things low-key and secure. Whether you&apos;re sharing secrets,
+            giving feedback, or just having some fun, Ghostchat ensures your
+            identity stays hidden, while your voice is heard. Say what you want,
+            without the worry.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -597,12 +597,12 @@ const projects: Project[] = [
     },
   },
   {
-    id: "jra",
-    category: "Result analyzer",
-    title: "JNTUA Results Analyzer",
-    src: "/assets/projects-screenshots/jra/1.png",
-    screenshots: ["1.png"],
-    live: "https://naresh-khatri.github.io/JNTUA-result-analyser-spa/#/",
+    id: 'jra',
+    category: 'Result analyzer',
+    title: 'JNTUA Results Analyzer',
+    src: '/assets/projects-screenshots/jra/1.png',
+    screenshots: ['1.png'],
+    live: '#',
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.vue],
       backend: [

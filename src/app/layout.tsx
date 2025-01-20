@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import { Inter, Archivo_Black } from "next/font/google";
-import "./globals.css";
-import ElasticCursor from "@/components/ui/ElasticCursor";
-import Particles from "@/components/Particles";
-import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/header/header";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Footer from "@/components/footer/footer";
-import Script from "next/script";
-import Preloader from "@/components/preloader";
-import EasterEggs from "@/components/easter-eggs";
-import { config } from "@/data/config";
-import SocketContextProvider from "@/contexts/socketio";
-import RemoteCursors from "@/components/realtime/remote-cursors";
+import EasterEggs from '@/components/easter-eggs';
+import Footer from '@/components/footer/footer';
+import Header from '@/components/header/header';
+import Particles from '@/components/Particles';
+import Preloader from '@/components/preloader';
+import RemoteCursors from '@/components/realtime/remote-cursors';
+import { ThemeProvider } from '@/components/theme-provider';
+import ElasticCursor from '@/components/ui/ElasticCursor';
+import { Toaster } from '@/components/ui/toaster';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import SocketContextProvider from '@/contexts/socketio';
+import { config } from '@/data/config';
+import type { Metadata } from 'next';
+import { Archivo_Black } from 'next/font/google';
+import Script from 'next/script';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: config.title,
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
         url: config.ogImg,
         width: 800,
         height: 600,
-        alt: "Portfolio preview",
+        alt: 'Portfolio preview',
       },
     ],
-    type: "website",
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: config.title,
     description: config.description.short,
     images: [config.ogImg],
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
 };
 
 const archivoBlack = Archivo_Black({
-  subsets: ["latin"],
-  weight: "400",
+  subsets: ['latin'],
+  weight: '400',
 });
 
 export default function RootLayout({
@@ -57,13 +57,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[archivoBlack.className].join(" ")}>
+    <html lang="en" className={[archivoBlack.className].join(' ')}>
       <head>
-        <Script
-          defer
-          src={process.env.UMAMI_DOMAIN}
-          data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
+        {process.env.UMAMI_DOMAIN && (
+          <Script
+            defer
+            src={process.env.UMAMI_DOMAIN}
+            data-website-id={process.env.UMAMI_SITE_ID}
+          ></Script>
+        )}
         {/* <Analytics /> */}
       </head>
       <body>

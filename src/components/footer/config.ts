@@ -1,11 +1,11 @@
 const footer: { title: string; href: string }[] = [
   {
-    title: "Blog",
-    href: "/blogs",
+    title: 'Blog',
+    href: 'https://appigle.github.io/',
   },
   {
-    title: "Newsletter",
-    href: "/news",
+    title: 'Portofolio',
+    href: 'https://zfc.xiaopotato.top',
   },
 ];
 
