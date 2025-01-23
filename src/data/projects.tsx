@@ -279,7 +279,7 @@ const projects: Project[] = [
     category: 'Social website',
     title: 'Xiao Potato',
     src: '/assets/projects-screenshots/xiaopotato/feature02.png',
-    screenshots: ['landing.png'],
+    screenshots: [],
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -372,44 +372,33 @@ const projects: Project[] = [
     },
   },
   {
-    disabled: true,
-    id: 'couponluxury',
-    category: 'Coupon site',
-    title: 'Coupon Luxury',
-    src: '/assets/projects-screenshots/couponluxury/landing.png',
-    screenshots: ['1.png', '2.png', '3.png', '4.png', '5.png'],
-    live: 'https://www.couponluxury.com/',
+    id: 'react-npm-lib-heartblossom',
+    category: 'npm Library',
+    title: 'React heart blossom',
+    src: '/assets/projects-screenshots/react-npm-lib/heartblossom.gif',
+    screenshots: [],
+    live: 'https://www.npmjs.com/package/react-love-heart-effect',
     skills: {
-      frontend: [
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.vue,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.docker,
-      ],
+      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react],
+      backend: [],
     },
     get content(): JSX.Element {
       return (
         <div>
           <TypographyP className="font-mono ">
-            CouponLuxury is your go-to destination for snagging the best deals
-            without lifting a finger. Whether you&apos;re hunting for the latest
-            discounts or trying to save a buck at your favorite stores,
-            CouponLuxury&apos;s got you covered.
+            React Heart Blossom is a lightweight, customizable React component
+            that adds a touch of love to your website. With a simple
+            configuration, you can create a beautiful heart blossom effect that
+            brings a little magic to your UI.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <p className="font-mono mb-2 mt-4">
-            As soon as you land, boom! You&apos;re greeted with the freshest
-            coupons and top-tier deals that&apos;ll make your wallet happy.
+            Whether you&apos;re building a dating app, wedding website, or just
+            want to spread some love, React Heart Blossom is the perfect
+            addition to your project.
           </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/landing.png`]} />
-          <TypographyH3 className="my-4 ">Stores</TypographyH3>
+          <SlideShow images={[`${BASE_PATH}/react-npm-lib/heartblossom.gif`]} />
+          {/* <TypographyH3 className="my-4 ">Stores</TypographyH3>
           <p className="font-mono mb-2">
             Dive into a comprehensive list of stores, each packed with exclusive
             deals and discounts. It&apos;s like having a VIP pass to every sale
@@ -449,7 +438,172 @@ const projects: Project[] = [
           <p className="font-mono mb-2">
             CouponLuxury isn&apos;t just a website; it&apos;s your personal
             deal-hunting assistant, ensuring you never miss out on a bargain!
+          </p> */}
+          {/* <TypographyP className="my-4 mt-8">
+          <strong>Misc:</strong>
+          Hosted not one, not two, but THREE coding contests (Codemacha) during
+          college. Safe to say, Coding Ducks passed the vibe check.
+        </TypographyP>
+        <TypographyP className="my-4 mt-8">
+          <strong>Target Audience:</strong>
+          For all the novice coders out there ready to make their mark.
+        </TypographyP> */}
+        </div>
+      );
+    },
+  },
+  {
+    id: 'react-npm-lib-key-press-showcase',
+    category: 'npm Library',
+    title: 'React key press showcase',
+    src: '/assets/projects-screenshots/react-npm-lib/keypress.gif',
+    screenshots: [],
+    live: 'https://www.npmjs.com/package/react-love-heart-effect',
+    skills: {
+      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.react],
+      backend: [],
+    },
+    get content(): JSX.Element {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            React key press showcase is a lightweight, customizable React
+            component
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <p className="font-mono mb-2 mt-4">
+            Key press showcase is a simple component that allows you to showcase
+            the key press on your website.
           </p>
+          <SlideShow images={[`${BASE_PATH}/react-npm-lib/keypress.gif`]} />
+          {/* <TypographyH3 className="my-4 ">Stores</TypographyH3>
+          <p className="font-mono mb-2">
+            Dive into a comprehensive list of stores, each packed with exclusive
+            deals and discounts. It&apos;s like having a VIP pass to every sale
+            in town.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/couponluxury/stores.png`,
+              `${BASE_PATH}/couponluxury/store.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Categories</TypographyH3>
+
+          <p className="font-mono mb-2">
+            Whatever you&apos;re into—fashion, tech, food—you&apos;ll find it
+            neatly organized here. No more endless scrolling; just pick a
+            category and get the best offers instantly.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/couponluxury/categories.png`]} />
+          <TypographyH3 className="my-4 mt-8">Custom CMS </TypographyH3>
+          <p className="font-mono mb-2">
+            Powered by Vue.js, this bad boy allows us to keep the content
+            dynamic and up-to-date. From flash sales to limited-time offers, my
+            CMS ensures everything&apos;s live and relevant.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/couponluxury/cms-1.png`,
+              `${BASE_PATH}/couponluxury/cms-2.png`,
+            ]}
+          />
+          <p className="font-mono mb-2 mt-5">
+            Plus, I&apos;ve sprinkled in some extra magic like personalized deal
+            recommendations, user-friendly search features, and a sleek,
+            responsive design that works like a charm on any device.
+          </p>
+          <p className="font-mono mb-2">
+            CouponLuxury isn&apos;t just a website; it&apos;s your personal
+            deal-hunting assistant, ensuring you never miss out on a bargain!
+          </p> */}
+          {/* <TypographyP className="my-4 mt-8">
+          <strong>Misc:</strong>
+          Hosted not one, not two, but THREE coding contests (Codemacha) during
+          college. Safe to say, Coding Ducks passed the vibe check.
+        </TypographyP>
+        <TypographyP className="my-4 mt-8">
+          <strong>Target Audience:</strong>
+          For all the novice coders out there ready to make their mark.
+        </TypographyP> */}
+        </div>
+      );
+    },
+  },
+  {
+    id: 'js-npm-lib-3d-tag-cloud',
+    category: 'npm Library',
+    title: 'JS 3D Tag Cloud',
+    src: '/assets/projects-screenshots/js-npm-lib/3d-cloud-01.gif',
+    screenshots: [],
+    live: 'https://www.npmjs.com/package/svg-3d-tag-cloud',
+    skills: {
+      frontend: [PROJECT_SKILLS.js],
+      backend: [],
+    },
+    get content(): JSX.Element {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            Svg3dTagCloud is a lightweight and user-friendly JavaScript library
+            that empowers you to generate visually appealing 3D tag clouds using
+            SVG (Scalable Vector Graphics). It offers effortless integration
+            into your web projects, delivering an engaging way to present
+            keyword lists or other textual data.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <p className="font-mono mb-2 mt-4">
+            Whether you&apos;re building a personal blog, portfolio, or
+            e-commerce site, Svg3dTagCloud adds a touch of creativity and
+            interactivity to your content.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/js-npm-lib/3d-cloud-01.gif`,
+              `${BASE_PATH}/js-npm-lib/3d-cloud-02.gif`,
+            ]}
+          />
+          {/* <TypographyH3 className="my-4 ">Stores</TypographyH3>
+          <p className="font-mono mb-2">
+            Dive into a comprehensive list of stores, each packed with exclusive
+            deals and discounts. It&apos;s like having a VIP pass to every sale
+            in town.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/couponluxury/stores.png`,
+              `${BASE_PATH}/couponluxury/store.png`,
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Categories</TypographyH3>
+
+          <p className="font-mono mb-2">
+            Whatever you&apos;re into—fashion, tech, food—you&apos;ll find it
+            neatly organized here. No more endless scrolling; just pick a
+            category and get the best offers instantly.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/couponluxury/categories.png`]} />
+          <TypographyH3 className="my-4 mt-8">Custom CMS </TypographyH3>
+          <p className="font-mono mb-2">
+            Powered by Vue.js, this bad boy allows us to keep the content
+            dynamic and up-to-date. From flash sales to limited-time offers, my
+            CMS ensures everything&apos;s live and relevant.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/couponluxury/cms-1.png`,
+              `${BASE_PATH}/couponluxury/cms-2.png`,
+            ]}
+          />
+          <p className="font-mono mb-2 mt-5">
+            Plus, I&apos;ve sprinkled in some extra magic like personalized deal
+            recommendations, user-friendly search features, and a sleek,
+            responsive design that works like a charm on any device.
+          </p>
+          <p className="font-mono mb-2">
+            CouponLuxury isn&apos;t just a website; it&apos;s your personal
+            deal-hunting assistant, ensuring you never miss out on a bargain!
+          </p> */}
           {/* <TypographyP className="my-4 mt-8">
           <strong>Misc:</strong>
           Hosted not one, not two, but THREE coding contests (Codemacha) during
