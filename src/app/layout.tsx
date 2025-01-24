@@ -67,6 +67,8 @@ export default function RootLayout({
           ></Script>
         )}
         {/* <Analytics /> */}
+
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <ThemeProvider
