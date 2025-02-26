@@ -16,7 +16,7 @@ import SmoothScroll from '../smooth-scroll';
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
+    <section id="projects" className="max-w-7xl mx-auto md:h-[95vh] relative">
       <Link href={'#projects'}>
         <h2
           className={cn(
