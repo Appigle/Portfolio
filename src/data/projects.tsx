@@ -790,38 +790,40 @@ const projects: Project[] = [
     },
   },
   {
-    disabled: true,
-    id: 'jra',
-    category: 'Result analyzer',
-    title: 'JNTUA Results Analyzer',
-    src: '/assets/projects-screenshots/jra/1.png',
-    screenshots: ['1.png'],
-    live: '#',
+    id: 'raysblog',
+    category: 'Blog',
+    title: "Ray's Blog",
+    src: '/assets/projects-screenshots/raysblog/blog01.png',
+    screenshots: ['blog01.png'],
+    live: 'https://appigle.xiaopotato.top/',
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.vue],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.mongo,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.docker,
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.gsap,
       ],
+      backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            JNTUA Results Analyzer was a revolutionary tool designed to simplify
-            and enhance the experience of accessing academic results. It served
-            as a powerful proxy between the JNTUA university results website and
-            its users, offering a range of features that made result analysis
-            faster and more efficient. Here&apos;s what made it stand out:
+            Built a personal blog using the Hexo static site generator with a
+            customized theme and optimized performance. Implemented automatic
+            deployment and content updates via CI/CD pipelines for seamless
+            publishing.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow images={[`${BASE_PATH}/jra/1.png`]} />
-          <TypographyH3 className="my-4 mt-8">
+          <ProjectsLinks live={this.live} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/raysblog/blog01.png`,
+              `${BASE_PATH}/raysblog/blog02.png`,
+            ]}
+          />
+          {/* <TypographyH3 className="my-4 mt-8">
             Effortless Results Retrieval
           </TypographyH3>
-          {/* Effortless Results Retrieval: */}
           <ul className="list-disc ml-6">
             <li className="font-mono">
               Search all your results using a single roll number, eliminating
@@ -886,7 +888,7 @@ const projects: Project[] = [
               academic results, making it a must-have tool until its unexpected
               shutdown.
             </li>
-          </ul>
+          </ul> */}
         </div>
       );
     },
