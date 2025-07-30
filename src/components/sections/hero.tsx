@@ -81,7 +81,7 @@ const HeroSection = () => {
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
-                  href="https://www.xiaopotato.top/assets/cv/CV_LEI_CHEN.pdf"
+                  href="https://assets.xiaopotato.top/assets/cv/CV_LEI_CHEN.pdf"
                   target="_blank"
                   className="flex-1"
                 >
