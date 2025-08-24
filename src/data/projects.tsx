@@ -275,6 +275,123 @@ export type Project = {
 };
 const projects: Project[] = [
   {
+    id: 'canadagoose',
+    category: 'Personal Finance Tracker',
+    title: 'CanadaGoose',
+    src: '/assets/projects-screenshots/canadagoose/FE-Financial.png',
+    screenshots: [],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.vue3,
+        PROJECT_SKILLS.typescript,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+        PROJECT_SKILLS.pinia,
+        PROJECT_SKILLS.cypress,
+        PROJECT_SKILLS.selenium,
+      ],
+      backend: [
+        PROJECT_SKILLS.nodejs,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.mysql,
+        PROJECT_SKILLS.jwt,
+        PROJECT_SKILLS.docker,
+        PROJECT_SKILLS.terraform,
+        PROJECT_SKILLS.aws,
+      ],
+    },
+    live: 'https://canadagoose.appigle.top/',
+    github: 'https://github.com/Appigle/CanadaGoose',
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            CanadaGoose - Full-Stack Personal Finance Tracker
+          </TypographyP>
+          <TypographyP className="font-mono">
+            CanadaGoose is a modern, secure full-stack web application built
+            with Vue 3 frontend and Express.js backend, featuring comprehensive
+            CI/CD deployment automation and production-ready infrastructure.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <TypographyH3 className="my-4 mt-8">Frontend Features</TypographyH3>
+          <p className="font-mono mb-2">
+            Modern Vue 3 application with responsive design, user
+            authentication, and comprehensive financial management interface.
+            Features include secure login/signup, financial transaction
+            tracking, and intuitive dashboard navigation.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/canadagoose/FE-HomePage.png`,
+              `${BASE_PATH}/canadagoose/FE-HomePage2.png`,
+              `${BASE_PATH}/canadagoose/FE-Login.png`,
+              `${BASE_PATH}/canadagoose/FE-SignUp.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">
+            Financial Management
+          </TypographyH3>
+          <p className="font-mono mb-2">
+            Comprehensive financial tracking system with transaction management,
+            category organization, and real-time data visualization. Users can
+            add, edit, and monitor their financial activities through an
+            intuitive interface.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/canadagoose/FE-Financial.png`,
+              `${BASE_PATH}/canadagoose/FE-AddNewTransaction.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">AWS Infrastructure</TypographyH3>
+          <p className="font-mono mb-2">
+            Production-ready infrastructure deployed on AWS with EC2 instances,
+            RDS MySQL database, S3 storage, and comprehensive CloudWatch
+            monitoring. Built with Terraform for infrastructure as code and
+            automated scaling.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/canadagoose/AWS-EC2-Dashboard.png`,
+              `${BASE_PATH}/canadagoose/AWS-RDS-MySQL.png`,
+              `${BASE_PATH}/canadagoose/AWS-S3-Buckets.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">Monitoring & CI/CD</TypographyH3>
+          <p className="font-mono mb-2">
+            Advanced monitoring with CloudWatch dashboards and log groups, plus
+            automated CI/CD pipeline using GitHub Actions. Includes automated
+            testing, deployment, and infrastructure management for seamless
+            updates.
+          </p>
+          <SlideShow
+            images={[
+              `${BASE_PATH}/canadagoose/AWS-CloudWatch-Dashboard.png`,
+              `${BASE_PATH}/canadagoose/AWS-CloudWatch-LogGroup.png`,
+              `${BASE_PATH}/canadagoose/Github-Action-Pipeline.png`,
+              `${BASE_PATH}/canadagoose/Github-Action-Pipeline-detail.png`,
+            ]}
+          />
+
+          <TypographyH3 className="my-4 mt-8">
+            DNS & Domain Management
+          </TypographyH3>
+          <p className="font-mono mb-2">
+            Professional domain management with CloudFlare DNS configuration,
+            ensuring reliable and secure access to the application with proper
+            SSL/TLS encryption and global CDN distribution.
+          </p>
+          <SlideShow images={[`${BASE_PATH}/canadagoose/CloudFlare-DNS.png`]} />
+        </div>
+      );
+    },
+  },
+  {
     id: 'xiaopotato',
     category: 'Social website',
     title: 'Xiao Potato',
