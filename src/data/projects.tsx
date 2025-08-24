@@ -354,7 +354,7 @@ const projects: Project[] = [
         PROJECT_SKILLS.aws,
       ],
     },
-    live: 'https://canadagoose.appigle.top/',
+    live: 'https://s25cicd.xiaopotato.top/',
     github: 'https://github.com/Appigle/CanadaGoose',
     get content() {
       return (
