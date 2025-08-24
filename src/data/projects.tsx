@@ -124,6 +124,12 @@ const PROJECT_SKILLS = {
     fg: 'white',
     icon: <RiNodejsFill />,
   },
+  nodejs: {
+    title: 'Node.js',
+    bg: 'black',
+    fg: 'white',
+    icon: <RiNodejsFill />,
+  },
   python: {
     title: 'Python',
     bg: 'black',
@@ -218,8 +224,20 @@ const PROJECT_SKILLS = {
     fg: 'white',
     icon: <SiTypescript />,
   },
+  typescript: {
+    title: 'TypeScript',
+    bg: 'black',
+    fg: 'white',
+    icon: <SiTypescript />,
+  },
   vue: {
     title: 'Vue.js',
+    bg: 'black',
+    fg: 'white',
+    icon: <SiVuedotjs />,
+  },
+  vue3: {
+    title: 'Vue 3',
     bg: 'black',
     fg: 'white',
     icon: <SiVuedotjs />,
@@ -259,6 +277,42 @@ const PROJECT_SKILLS = {
     bg: 'black',
     fg: 'white',
     icon: <SiSupabase />,
+  },
+  vite: {
+    title: 'Vite',
+    bg: 'black',
+    fg: 'white',
+    icon: '',
+  },
+  pinia: {
+    title: 'Pinia',
+    bg: 'black',
+    fg: 'white',
+    icon: '',
+  },
+  cypress: {
+    title: 'Cypress',
+    bg: 'black',
+    fg: 'white',
+    icon: '',
+  },
+  selenium: {
+    title: 'Selenium',
+    bg: 'black',
+    fg: 'white',
+    icon: '',
+  },
+  terraform: {
+    title: 'Terraform',
+    bg: 'black',
+    fg: 'white',
+    icon: '',
+  },
+  aws: {
+    title: 'AWS',
+    bg: 'black',
+    fg: 'white',
+    icon: '',
   },
 };
 export type Project = {
